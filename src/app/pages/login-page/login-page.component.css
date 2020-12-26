@@ -1,0 +1,43 @@
+:host {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7rem;
+    padding: 0 2rem;
+}
+
+.finance {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.finance img {
+    width: 500px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 1050px) {
+     :host {
+        grid-gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {}
+
+@media screen and (max-width: 900px) {
+     :host {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 375px) {
+     :host {
+        padding: 0 1rem;
+    }
+}

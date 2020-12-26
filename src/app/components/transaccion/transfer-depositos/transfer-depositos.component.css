@@ -1,0 +1,158 @@
+.pasarela-deposito {
+    z-index: 10;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    animation:fadeIn 0.5s ease-in;
+}
+@keyframes fadeIn {
+    from { 
+      opacity:0;
+    }
+    to {
+      opacity:1;
+    }
+}
+.pasarela_status {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    padding-top: 1.5rem;
+    justify-content: space-evenly;
+}
+
+.pasarela_status a {
+    padding: 0.6rem 1rem;
+    border-radius: 100%;
+    background-color: #cfcfcf;
+    border: 2px solid #cfcfcf;
+    color: #fff;
+    pointer-events: none;
+    z-index: 5;
+    /* position: relative; */
+}
+
+.pasarela_status a.active {
+    background-color: var(--colorNaranja);
+}
+
+.form-deposito, .resumen_transferencia {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 2rem;
+}
+
+.form-deposito select {
+    padding: .3rem;
+    border: 1px solid var(--colorGris);
+    outline: none;
+    width: 100%;
+}
+
+.caja_input {
+    border: 1px solid var(--colorGris);
+    background-color: #fff;
+    padding: .8rem;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+
+.caja_input div {
+    margin: 5px 0;
+}
+
+.caja_input.mt-2 {
+    margin-top: 1rem;
+}
+
+.caja_input h5 {
+    line-height: 1;
+    padding: .2rem;
+}
+
+.cuentas {
+    font-size: 14px;
+    display: inline-block;
+    width: 40%;
+    padding: .2rem;
+    letter-spacing: 1px;
+}
+
+.end {
+    
+    text-align: right;
+}
+
+.caja_input input {
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #f1f1f1;
+    padding: .5rem;
+    margin: 5px;
+    text-align: right;
+    width: 98%;
+    outline: none;
+}
+
+input.w-80 {
+    width: 80%!important;
+}
+
+input:active {
+    border: 1px solid #000;
+}
+
+.boton {
+    font-size: 14px;
+    padding: .3rem;
+    border: 1px solid var(--colorAzulOscuro);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: var(--colorAzulOscuro);
+    color: #fff;
+}
+
+.action-buttons {
+    margin-top: 6rem;
+    transform: translateY(-3rem);
+    text-align: center;
+}
+
+.action-buttons input {
+    font-size: 16px;
+}
+
+.action-buttons a {
+    margin-right: 1.5rem;
+}
+
+textarea {
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    width: 98%;
+    outline: none;
+    padding: .2rem;
+}
+
+.w-100 {
+    width: 100%;
+    margin-left: 15px;
+}
+
+option{
+    box-sizing: content-box;
+    padding: 20px 0;
+    border: 1px solid var(--colorGris);
+    outline: none;
+   
+    color:#004b85;
+}

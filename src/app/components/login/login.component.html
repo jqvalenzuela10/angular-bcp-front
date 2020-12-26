@@ -1,0 +1,31 @@
+<div class="login-container">
+    <form #login="ngForm" (ngSubmit) = "ingresar(login)" >
+        <img class="avatar" src="assets/img/avatar.svg" alt="Avatar">
+        <h2>Bienvenido</h2>
+        <div class="input-div user">
+            <div class="i">
+                <i class="fas fa-user"></i>
+            </div>
+            <div>
+                <h5>Dni</h5>
+                <input name="dni" [(ngModel)]="auth.dni" (focus)="onFocus($event)" (blur)="onBlur($event)" type="text" class="input" autocomplete="off">
+            </div>
+        </div>
+        <div class="input-div pwd">
+            <div class="i">
+                <i class="fas fa-lock"></i>
+            </div>
+            <div>
+                <h5>Clave</h5>
+                <input name="password" [(ngModel)]="auth.password" (focus)="onFocus($event)" (blur)="onBlur($event)" (keyup)="onKeyUp($event)" id="pwd" type="password" class="input">
+                <i (click)="showPassword($event)" class="showpwd fas fa-eye"></i>
+            </div>
+        </div>
+        <a class="forgot-password" href="#">Olvidaste tu contraseña?</a>
+        <input type="submit" class="btn" value="Ingresar">
+        <div class="text-center">
+            <span class="text-gray">¿No tienes cuenta? </span>
+            <a class="register" [routerLink]="['/registro']">Registrate aquí</a>
+        </div>
+    </form>
+</div>

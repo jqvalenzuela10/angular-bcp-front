@@ -1,0 +1,88 @@
+<div id="global" class="style-scroll-global">
+    <div class="transfer-transac">
+        <div class="panel-heading collapsible active" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a style="cursor: pointer;" (click)="abrirContenido('contenidoTransferencia')">
+                    Transferencia
+                </a>
+            </h4>
+        </div>
+        <div [hidden]="contenidoTransferencia">
+            <ul *ngIf="componenteTransferenciaDepositos" class="transfer_opciones">
+                <li>
+                    <a>Realizar transferencias entre mis cuentas</a>
+                </li>
+                <li (click)="abrirComponenteTransferenciaDepositos()">
+                    <a>Realizar transferencias a terceros</a>
+                </li>
+                <li>
+                    <a>Realizar transferencias a bancos inmediatos</a>
+                </li>
+
+            </ul>
+
+            <div *ngIf="!componenteTransferenciaDepositos" class="deposito" class="transfer_opciones">
+                <app-transfer-depositos [data]="componenteTransferenciaDepositos" (retrocederComponenteTransferenciaDeposito)="componenteTransferenciaDepositos= $event"></app-transfer-depositos>
+            </div>
+        </div>
+    </div>
+
+    <div class="transfer-transac" >
+        <div class="panel-heading active" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a style="cursor: pointer;" (click)="abrirContenido('contenidoPago')">
+                    Pagos
+                </a>
+            </h4>
+        </div>
+        <div [hidden]="contenidoPago">
+            <ul *ngIf="componentePagosDepositos" class="transfer_opciones">
+                <li>
+                    <a>Servicios(agua, luz, etc)</a>
+                </li>
+                <li (click)="abrirComponentePagoDepositos()">
+                    <a>telefono, cable, internet</a>
+                </li>
+                <li>
+                    <a>tarjetas de credito</a>
+                </li>
+
+            </ul>
+
+            <div *ngIf="!componentePagosDepositos" class="deposito" class="transfer_opciones">
+                <app-pagos-depositos></app-pagos-depositos>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="transfer-transac" >
+        <div class="panel-heading active" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a style="cursor: pointer;" (click)="abrirContenido('contenidoCambiarDolares')">
+                    Cambiar dolares
+                </a>
+            </h4>
+        </div>
+        <div [hidden]="contenidoCambiarDolares">
+            <ul *ngIf="componenteCambiarDolares" class="transfer_opciones">
+                <li>
+                    <a>Servicios(agua, luz, etc)</a>
+                </li>
+                <li (click)="abrirComponenteCambiarDolares()">
+                    <a>telefono, cable, internet</a>
+                </li>
+                <li>
+                    <a>tarjetas de credito</a>
+                </li>
+
+            </ul>
+
+            <div *ngIf="!componenteCambiarDolares" class="deposito" class="transfer_opciones">
+                <app-cambio-dolares [data]="componenteCambiarDolares" (retrocederComponenteTransferenciaDeposito)="componenteCambiarDolares= $event"></app-cambio-dolares>
+            </div>
+        </div>
+    </div>
+
+
+</div>

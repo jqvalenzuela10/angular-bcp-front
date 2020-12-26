@@ -1,0 +1,79 @@
+.bx.bx-bell {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    height: 60px;
+    width: 60px;
+    background-color: var(--colorAzul);
+    border-radius: 50%;
+    margin: 0 12px 12px 0;
+    color: var(--colorBlanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.bx.bx-bell:hover {
+    background-color: var(--colorAzulOscuro);
+    color: var(--colorNaranja)
+}
+
+.notificaciones {
+    position: absolute;
+    bottom: 130px;
+    right: 80px;
+    z-index: 1000;
+    display: none;
+    max-height: 30rem;
+    overflow-y: auto;
+}
+
+.contenido-notificacion {
+    padding: 1rem;
+    background-color: #fafafa;
+    border-radius: 5px;
+    border: 2px solid var(--colorAzulOscuro);
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+p {
+    font-size: 14px;
+    color: var(--colorAzulOscuro);
+}
+
+.mostrarN {
+    display: block;
+}
+
+#style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}

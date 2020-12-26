@@ -1,0 +1,41 @@
+:host {
+    width: calc(100vw - var(--nav-width));
+    float: right;
+    height: 100vh;
+    padding: 1rem 2rem;
+    transition: .5s;
+}
+
+.config_container {
+    height: calc(100% - 3.5rem);
+    width: 50%;
+    border-right: 3px solid var(--colorGris);
+}
+
+.cabecera {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    margin-top: 1rem;
+}
+
+.config_title {
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .5rem;
+    margin-right: .3rem;
+    color: var(--colorGris);
+    cursor: pointer;
+    outline: none;
+}
+
+.config_title.active {
+    color: var(--colorAzul);
+    border-bottom: 4px solid var(--colorAzul);
+}
+

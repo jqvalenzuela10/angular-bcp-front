@@ -1,0 +1,17 @@
+<h2>Configuración</h2>
+<div class="config_container">
+    <div class="cabecera">
+        <div 
+            [routerLink]="['general']"
+            routerLinkActive="active"
+            class="config_title">General</div>
+        <div class="config_title">Cuenta</div>
+        <div 
+            [routerLink]="['notificaciones']"
+            routerLinkActive="active"
+            class="config_title">Notificaciones</div>
+    </div>
+    <div class="config_list">
+        <router-outlet></router-outlet>
+    </div>
+</div>

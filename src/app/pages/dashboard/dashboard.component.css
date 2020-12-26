@@ -1,0 +1,6 @@
+.container {
+    width: calc(100vw - var(--nav-width));
+    float: right;
+    height: 100vh;
+    transition: .5s;
+}

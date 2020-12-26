@@ -1,0 +1,131 @@
+<div style="width: 100%;" class="pasarela-deposito">
+    <ul class="pasarela_status">
+        <li>
+            <a href="#" class="active">1</a>
+        </li>
+        <li>
+            <a href="#" [ngClass]="{'active': transf}">2</a>
+        </li>
+        <li>
+            <a href="#" [ngClass]="{'active': confirmacion}">3</a>
+        </li>
+    </ul>
+
+    <form #transfe="ngForm" (ngSubmit)="realizarTransferencia(transfe)" class="form-deposito">
+
+        <div *ngIf="!transf">
+
+            <div class="caja_input">
+
+                <div style="display: flex; flex-direction: row;justify-content: space-between;">
+                    <h5>Cuenta de origen</h5>
+                    <span class="end">S/{{monto}}</span>
+                </div>
+                <select name="codCuenta" id="cuentas" [(ngModel)]="transferenciaData.codCuenta" (change)="ponerSaldo($event.target.value)" >
+                    <option value="">Cuenta de origen</option>
+                    <option *ngFor="let numero of cuentasBancarias" [value]="numero.codCuenta" >
+                        {{ numero.numCuenta }}
+                    </option>
+                </select>
+            </div>
+
+
+
+
+            <div class="caja_input  mt-2">
+                <h5>Monto</h5>
+                <div class="caja_input_content">
+                    <input [(ngModel)]="transferenciaData.monto" type="number" name="monto">
+                </div>
+            </div>
+
+            <div class="caja_input  mt-2">
+                <h5>Cuenta destino</h5>
+                <div>
+                    <input type="text" [(ngModel)]=numeroCuenta class="w-80" name="numeroCuenta">
+                    <span class="boton"> Cancelar </span>
+                </div>
+            </div>
+            <div class="caja_input mt-2">
+                <h5>Descripcion(opcional)</h5>
+                <div>
+                    <textarea name="descripcion" rows="3" [(ngModel)]="transferenciaData.descripcion"></textarea>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <a (click)="retrocederAComponenteTransferencia()" class="btn btn-icono outline">Atras</a>
+                <a class="btn btn-naranja" (click)="verificarDatos()">Continuar</a>
+            </div>
+        </div>
+
+        <div *ngIf="resumen">
+            <div class="caja_input">
+                <h5>Cuentas de origen</h5>
+                <div>
+                    <h4>Cuenta de ahorro</h4>
+                    <h5>{{ cuentaOrigen.numCuenta }}</h5>
+                </div>
+            </div>
+            <div class="caja_input">
+                <h5>Monto</h5>
+                <div>
+                    <span>{{ transferenciaData.monto }}</span>
+                </div>
+            </div>
+            <div class="caja_input">
+                <h5>Cuenta de destino</h5>
+                <div>
+                    <h4>{{ cuentaDestino.codCli.nomCli }} {{ cuentaDestino.codCli.apePatCli }} {{ cuentaDestino.codCli.apeMatCli
+                        }}
+                    </h4>
+                    <h5>{{ cuentaDestino.numCuenta }}</h5>
+                </div>
+            </div>
+            <div class="caja_input">
+                <h5>Confirma que los datos ingresados son correctos antes de continuar</h5>
+            </div>
+            <div class="action-buttons">
+                <a class="btn btn-icono outline" (click)="retrocederAComponenteTransferencia()">Cancelar</a>
+                <input type="submit" value="Confirmar" class="btn btn-naranja">
+            </div>
+        </div>
+
+    </form>
+
+    <div *ngIf="confirmacion" class="w-100">
+        <div class="resumen_transferencia">
+            <div class="caja_input">
+                <h5>Cuentas de origen</h5>
+                <div>
+                    <h4>Cuenta de ahorro</h4>
+                    <h5>{{ cuentaOrigen.numCuenta }}</h5>
+                </div>
+            </div>
+            <div class="caja_input">
+                <h5>Monto</h5>
+                <div>
+                    <span>{{ transferenciaData.monto }}</span>
+                </div>
+            </div>
+            <div class="caja_input">
+                <h5>Cuenta de destino</h5>
+                <div>
+                    <h4>{{ cuentaDestino.codCli.nomCli }} {{ cuentaDestino.codCli.apePatCli }} {{ cuentaDestino.codCli.apeMatCli
+                        }}
+                    </h4>
+                    <h5>{{ cuentaDestino.numCuenta }}</h5>
+                </div>
+            </div>
+            <div class="caja_input">
+                <h5>Numero de operacion</h5>
+                <div>
+                    <span>110450</span>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <a (click)="retrocederAComponenteTransferencia()" class="btn btn-naranja">Volver</a>
+            </div>
+        </div>
+    </div>
+
+</div>

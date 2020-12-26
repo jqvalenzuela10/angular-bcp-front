@@ -1,0 +1,19 @@
+<h2>Bienvenido {{ cliente.nomCli }} {{ cliente.apePatCli}} </h2>
+<div class="home_container">
+    <div *ngFor="let cuenta of cuentasBancarias" class="balance">
+        <div class="balance_details">
+            <div class="cuenta">{{ cuenta.tipoCuentaBancario.descripcion | uppercase }}</div>
+            <div class="balance_nrocuenta">CCI : {{ cuenta.numCuenta }} </div>
+        </div>
+        <div *ngIf="cuenta.codTipoMoneda.codTipoMoneda == 1" class="balance_monto">{{ cuenta.saldo | currency:'PEN' }}
+        
+
+           <a style="max-height: 25px;" href="#">
+                <img  width="25px" height="25px" src="assets/img/favicon-72x72.png" alt="" srcset="">
+           </a>
+        </div>
+        <div *ngIf="cuenta.codTipoMoneda.codTipoMoneda == 2" class="balance_monto">{{ cuenta.saldo | currency:'USD' }}</div>
+
+    </div>
+
+</div>

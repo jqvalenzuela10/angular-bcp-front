@@ -1,0 +1,88 @@
+:root {
+    --colorAzul: #005392;
+    --colorNaranja: #FF7800;
+    --colorBlanco: #FFFFFF;
+    --colorGris: #d9d9d9;
+    --colorIconos: #cae2fb;
+    --colorPlaceholder: #999;
+    --colorAzulOscuro: #004b85;
+
+    --fontFamily: 'Poppins', sans-serif;
+    --fontBold: 700;
+    --fontSize-sm: .875rem;
+
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+
+    --nav-width: 56px;
+
+    --color-ingreso:#28a745!important;
+    --color-salida:#dc3545!important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontFamily);
+}
+
+body {
+    position: relative;
+    /*padding: 1rem 0 0 5rem;*/
+    transition: .5s;
+    height: 100vh;
+    width: 100vw;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: .75rem 1rem;
+    border-radius: .25rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-naranja {
+    background-color: var(--colorNaranja);
+    color: var(--colorBlanco);
+}
+
+.btn-naranja:hover {
+    background-color: #bd5a03;
+}
+
+.btn-ingreso{
+color:var(--color-ingreso)
+}
+.btn-salida{
+color:var(--color-salida)
+}
+
+.btn-icono {
+    background-color: var(--colorAzul);
+    color: var(--colorBlanco);
+}
+
+.btn-icono.outline {
+    background-color: var(--colorBlanco);
+    border: 1px solid var(--colorAzul);
+    color: var(--colorAzulOscuro);
+}
+
+.btn-icono.outline:hover {
+    background-color: rgba(153, 153, 153, 0.062);
+}

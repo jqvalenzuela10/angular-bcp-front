@@ -1,0 +1,47 @@
+<div class="registro-container">
+    <form>
+        <h2>Crea tu cuenta</h2>
+        <div class="input-div user">
+            <div class="i">
+                <i class="fas fa-user"></i>
+            </div>
+            <div>
+                <h5>Nombres</h5>
+                <input (focus)="onFocus($event)" (blur)="onBlur($event)" type="text" class="input">
+            </div>
+        </div>
+        <div class="input-div user">
+            <div class="i">
+                <i class="fas fa-user"></i>
+            </div>
+            <div>
+                <h5>Apellidos</h5>
+                <input (focus)="onFocus($event)" (blur)="onBlur($event)" type="text" class="input">
+            </div>
+        </div>
+        <div class="input-div user">
+            <div class="i">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+                <h5>Email</h5>
+                <input (focus)="onFocus($event)" (blur)="onBlur($event)" type="text" class="input">
+            </div>
+        </div>
+        <div class="input-div pwd">
+            <div class="i">
+                <i class="fas fa-lock"></i>
+            </div>
+            <div>
+                <h5>Clave</h5>
+                <input (focus)="onFocus($event)" (blur)="onBlur($event)" (keyup)="onKeyUp($event)" id="pwd" type="password" class="input">
+                <i (click)="showPassword($event)" class="showpwd fas fa-eye"></i>
+            </div>
+        </div>
+        <input (click)="registrar()" type="submit" class="btn" value="Registrarte">
+        <div class="text-center">
+            <span class="text-gray">¿Ya tienes cuenta? </span>
+            <a class="login" [routerLink]="['/login']">Inicia sesión</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,69 @@
+:host {
+    width: calc(100vw - var(--nav-width));
+    float: right;
+    height: 100vh;
+    padding: 1rem 2rem;
+    transition: .5s;
+}
+
+.home_container {
+    height: calc(100% - 4.5rem);
+    width: 100%;
+   color: white;
+}
+
+.balance {
+    height: 150px;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(0,75,133);
+    background: linear-gradient(73deg, rgba(0,75,133,1) 0%, rgba(0,75,133,1) 22%, rgba(0,75,133,1) 35%, rgba(19,82,130,1) 51%, rgba(0,75,133,1) 74%, rgba(0,75,128,1) 89%, rgba(28,96,149,1) 100%);
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+    -webkit-box-shadow: -2px 6px 22px 2px rgba(0,75,133,0.35); 
+    box-shadow: -2px 6px 22px 2px rgba(0,75,133,0.35);
+}
+
+.balance_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 9px 0 0 0;
+}
+
+.cuenta {
+    color: white;
+    font-size: .8rem;
+}
+
+.balance_monto {
+    color: var(--colorNaranja);
+    font-size: 1.5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+
+.balance_title {
+    font-size: 1.8rem;
+}
+.balance_nrocuenta{}
+@media (min-width: 768px) {
+    /* #home {
+        display: grid;
+        grid-template-rows: 8vh 1fr 10vh;
+        overflow-x: hidden;
+    }
+
+    .botones {
+        display: block;
+    }
+    
+    .nav {
+        justify-content: center;
+    } */
+}

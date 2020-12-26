@@ -1,0 +1,139 @@
+:host {
+    background-color: var(--colorAzul);
+    position: fixed;
+    top: 0;
+    left: 0;
+    --nav-width: 56px;
+    width: calc(var(--nav-width));
+    height: 100vh;
+    padding: 1.25rem .5rem .5rem;
+    transition: .5s;
+    z-index: var(--z-fixed);
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav_logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.nav_logo-text {
+    font-weight: var(--fontBold);
+    font-size: 1.3rem;
+}
+
+.nav_logo-text:nth-child(2) {
+    color: var(--colorBlanco);
+}
+
+.nav_logo-text:nth-child(3) {
+    color: var(--colorNaranja);
+}
+
+.nav_toogle {
+    position: absolute;
+    top: 1.1rem;
+    right: -.6rem;
+    width: 20px;
+    height: 20px;
+    background-color: var(--colorNaranja);
+    border-radius: 50%;
+    font-size: 1.25rem;
+    color: var(--colorBlanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.nav_link {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    color: var(--colorBlanco);
+    transition: .3s;
+}
+
+.nav_link:last-child {
+    margin-bottom: .7rem;
+}
+
+.nav_link:hover {
+    background-color: var(--colorNaranja);
+    color: var(--colorBlanco);
+}
+
+.nav_icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.nav_text {
+    font-weight: var(--fontBold);
+    font-size: .9rem;
+}
+
+:host.show {
+    /*width: calc(var(--nav-width) + 160px);*/
+    --nav-width: 216px;
+}
+
+body.expander {
+    padding: 1rem 0 0 12rem;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+.active {
+    background-color: var(--colorNaranja);
+    color: var(--colorBlanco);
+}
+
+hr {
+    margin-bottom: .5rem;
+    color: var(--colorGris);
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    font-size: .9rem;
+    color: var(--colorBlanco);
+}
+
+i.logout {
+    color: var(--colorBlanco);
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.email {
+    color: var(--colorGris);
+}
+
+@media screen and (min-width: 768px) {
+     :root {
+        --fontSize-sm: .938rem;
+    }
+}

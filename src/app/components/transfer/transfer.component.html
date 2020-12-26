@@ -1,0 +1,34 @@
+
+<div class="transfer-container" >
+    <app-transferencia  style="width: 75%" ></app-transferencia>
+ 
+    <div class="transfer-history">
+        <div class="cabecera">
+            <div class="hist_title">Historial</div>
+            <div class="action">
+                <i class='bx bxs-cog'></i>
+            </div>
+        </div>
+        
+        <div *ngFor="let item of transacciones" class="trans_hist">
+            
+            <div class="transac">
+                <div class="transac_icon">
+                    <i class='bx bx-sort-alt-2 bx-rotate-90'></i>
+                </div>
+                <div class="transac_detail">
+                    <span>{{item.mensaje}}</span>
+                    <small class="transac_detail_date">{{item.fecha | date}},  {{item.hora}}</small>
+                    <small class="transac_detail_date">{{item.tipoTransaccion}}</small>
+                </div>
+                <!--<div class="transac_moneda">
+                    <i class='bx bx-dollar'></i>
+                </div>-->
+                <div class="transac_monto">
+                    <span [ngClass]="(item.movimientoColor==true)?'btn-ingreso':'btn-salida'">{{item.movimientoColor==true?'+':'-'}} {{ item.monto | currency:'USD'}}</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

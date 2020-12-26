@@ -1,0 +1,9 @@
+<i class='bx bx-bell' (click)="mostrarNotificacion()" ></i>
+
+<div class="notificaciones" id="style-1">
+    <div *ngFor="let noti of listaNotificacion" class="contenido-notificacion" >
+        <h5>{{ noti.titulo }}</h5>
+        <h6>{{ noti.descripcion | slice:0:35 }}</h6>
+        <p>Fecha: {{ noti.fecha | date }}</p>
+    </div>
+</div>
